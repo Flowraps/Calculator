@@ -1,6 +1,5 @@
 #    Made by Flow.
 #    version = 5.0
-# some testing is gay
 from decimal import * 
 getcontext()
 
