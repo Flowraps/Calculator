@@ -1,23 +1,19 @@
-
-# fix division by 0 in 4th choice
+#    Made by Flow.
 #    version = 5.0
+# some testing is gay
 from decimal import * 
 getcontext()
-
 
 def main():
     import os
     import time
-    import sys
     from math import sqrt
     os.system("title Flow's calculator!")
     from colorama import init, Fore, Style
     init(convert=True, autoreset=True)
-    #Variables stored here that are defined not by the user.
     #--------------------------------------------DO NOT CHANGE----------------------------------------------------------
-
+    #Variables stored here that are defined not by the user.
     no_choice = "INVALID CHOICE!"
-    Status_of_calculator = True
     Avogadronumber = 6.0221409 * 10 ** 23
     nolist = ['no', 'n', 'nope', 'nop']
     yeslist = ['yes', 'y', 'yea', 'yeah']
@@ -42,24 +38,7 @@ def main():
                     ██║ ╚████║╚██████╔╝██║ ╚═╝ ██║██████╔╝███████╗██║  ██║    
                     ╚═╝  ╚═══╝ ╚═════╝ ╚═╝     ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    
                         """
-    status_on = f"""{Fore.GREEN}
-                                ███████╗████████╗ █████╗ ████████╗██╗   ██╗███████╗     ██████╗ ███╗   ██╗    
-                                ██╔════╝╚══██╔══╝██╔══██╗╚══██╔══╝██║   ██║██╔════╝    ██╔═══██╗████╗  ██║    
-                                ███████╗   ██║   ███████║   ██║   ██║   ██║███████╗    ██║   ██║██╔██╗ ██║    
-                                ╚════██║   ██║   ██╔══██║   ██║   ██║   ██║╚════██║    ██║   ██║██║╚██╗██║    
-                                ███████║   ██║   ██║  ██║   ██║   ╚██████╔╝███████║    ╚██████╔╝██║ ╚████║    
-                                ╚══════╝   ╚═╝   ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚══════╝     ╚═════╝ ╚═╝  ╚═══╝    
-        """
-    status_off = f"""{Fore.RED}
-                                    ███████╗████████╗ █████╗ ████████╗██╗   ██╗███████╗    ██████╗  ██████╗ ██╗    ██╗███╗   ██╗
-                                    ██╔════╝╚══██╔══╝██╔══██╗╚══██╔══╝██║   ██║██╔════╝    ██╔══██╗██╔═══██╗██║    ██║████╗  ██║
-                                    ███████╗   ██║   ███████║   ██║   ██║   ██║███████╗    ██║  ██║██║   ██║██║ █╗ ██║██╔██╗ ██║
-                                    ╚════██║   ██║   ██╔══██║   ██║   ██║   ██║╚════██║    ██║  ██║██║   ██║██║███╗██║██║╚██╗██║
-                                    ███████║   ██║   ██║  ██║   ██║   ╚██████╔╝███████║    ██████╔╝╚██████╔╝╚███╔███╔╝██║ ╚████║
-                                    ╚══════╝   ╚═╝   ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚══════╝    ╚═════╝  ╚═════╝  ╚══╝╚══╝ ╚═╝  ╚═══╝
-
-        
-        """
+   
     #---------------------------------------FUNCTIONS STORED HERE------------------------------------------------------
     def quit_progam_any_time(check_input):
         if check_input in exitlist: 
@@ -175,330 +154,298 @@ def main():
                 time.sleep(2)
                 exit()
             choice = int(choice)
-    #-GLOBAL VARIABLES STORED DOWN BELOW. DO NOT MODIFY AS THIS WILL BREAK PROGRAM-
+    
+    #-GLOBAL VARIABLES STORED DOWN BELOW. DO NOT MODIFY AS THIS COULD BREAK PROGRAM-
     global firstnum
     global secondnum
     global base_number
     global exponent
     #------------------------------------------------------------------------------
-    if Status_of_calculator == False:
-        os.system("title :(")
-        print(f"""{Fore.RED}
-                                    ███████╗████████╗ █████╗ ████████╗██╗   ██╗███████╗    ██████╗  ██████╗ ██╗    ██╗███╗   ██╗
-                                    ██╔════╝╚══██╔══╝██╔══██╗╚══██╔══╝██║   ██║██╔════╝    ██╔══██╗██╔═══██╗██║    ██║████╗  ██║
-                                    ███████╗   ██║   ███████║   ██║   ██║   ██║███████╗    ██║  ██║██║   ██║██║ █╗ ██║██╔██╗ ██║
-                                    ╚════██║   ██║   ██╔══██║   ██║   ██║   ██║╚════██║    ██║  ██║██║   ██║██║███╗██║██║╚██╗██║
-                                    ███████║   ██║   ██║  ██║   ██║   ╚██████╔╝███████║    ██████╔╝╚██████╔╝╚███╔███╔╝██║ ╚████║
-                                    ╚══════╝   ╚═╝   ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚══════╝    ╚═════╝  ╚═════╝  ╚══╝╚══╝ ╚═╝  ╚═══╝
 
-        
-        """)
-    elif Status_of_calculator == True:
 
-        os.system("title Loading calculator. Please wait..")
-                                                        # Title down below that will get deleted after 3 seconds.
-        print(status_on)
-        time.sleep(3)
-        
-        os.system("cls")
-        os.system("title Flow's calculator -Running...")
-      
-        print(f""" {Fore.LIGHTMAGENTA_EX}
-                                     ______           __                   __            __                       
-                                    /      \         |  \                 |  \          |  \                      
-                                   |  ▓▓▓▓▓▓\ ______ | ▓▓ _______ __    __| ▓▓ ______  _| ▓▓_    ______   ______  
-                                   | ▓▓   \▓▓|      \| ▓▓/       \  \  |  \ ▓▓|      \|   ▓▓ \  /      \ /      \ 
-                                   | ▓▓       \▓▓▓▓▓▓\ ▓▓  ▓▓▓▓▓▓▓ ▓▓  | ▓▓ ▓▓ \▓▓▓▓▓▓ \▓▓▓▓▓▓ |  ▓▓▓▓▓▓\  ▓▓▓▓▓▓
-                                   | ▓▓   __ /      ▓▓ ▓▓ ▓▓     | ▓▓  | ▓▓ ▓▓/      ▓▓ | ▓▓ __| ▓▓  | ▓▓ ▓▓   \▓▓
-                                   | ▓▓__/  \  ▓▓▓▓▓▓▓ ▓▓ ▓▓_____| ▓▓__/ ▓▓ ▓▓  ▓▓▓▓▓▓▓ | ▓▓|  \ ▓▓__/ ▓▓ ▓▓      
-                                    \▓▓    ▓▓\▓▓    ▓▓ ▓▓\▓▓     \ ▓▓    ▓▓ ▓▓\▓▓    ▓▓  \▓▓  ▓▓\▓▓    ▓▓ ▓▓      
-                                     \▓▓▓▓▓▓  \▓▓▓▓▓▓▓\▓▓ \▓▓▓▓▓▓▓ \▓▓▓▓▓▓ \▓▓ \▓▓▓▓▓▓▓   \▓▓▓▓  \▓▓▓▓▓▓ \▓▓      
-                                                                                
-                                                                                
-                                                                                
+    os.system("cls")
+    os.system("title Flow's calculator -Running...")
 
-        """)   
-        
-        
-        print(f"{Fore.GREEN}You have opened up a calculator.\n")
-        print(f"{Fore.RED}1 to 4 is basic math, 5 to 8 has more options to choose.{Fore.RESET}\n\n1 = add, 2 = subtract, 3 = multiply, 4 = divide\n\n5 = square root, 6 = power, 7 = Avogadro's selection")
-        A = input(f"{Fore.MAGENTA}\nPlease type your choice:  {Style.RESET_ALL}{Fore.BLUE}")
-        A = A.lower()            #We do this incase user inputs something of a capital letter for the exitlist keywords.
+    print(f""" {Fore.LIGHTMAGENTA_EX}
+                                 ______           __                   __            __                       
+                                /      \         |  \                 |  \          |  \                      
+                               |  ▓▓▓▓▓▓\ ______ | ▓▓ _______ __    __| ▓▓ ______  _| ▓▓_    ______   ______  
+                               | ▓▓   \▓▓|      \| ▓▓/       \  \  |  \ ▓▓|      \|   ▓▓ \  /      \ /      \ 
+                               | ▓▓       \▓▓▓▓▓▓\ ▓▓  ▓▓▓▓▓▓▓ ▓▓  | ▓▓ ▓▓ \▓▓▓▓▓▓ \▓▓▓▓▓▓ |  ▓▓▓▓▓▓\  ▓▓▓▓▓▓
+                               | ▓▓   __ /      ▓▓ ▓▓ ▓▓     | ▓▓  | ▓▓ ▓▓/      ▓▓ | ▓▓ __| ▓▓  | ▓▓ ▓▓   \▓▓
+                               | ▓▓__/  \  ▓▓▓▓▓▓▓ ▓▓ ▓▓_____| ▓▓__/ ▓▓ ▓▓  ▓▓▓▓▓▓▓ | ▓▓|  \ ▓▓__/ ▓▓ ▓▓      
+                                \▓▓    ▓▓\▓▓    ▓▓ ▓▓\▓▓     \ ▓▓    ▓▓ ▓▓\▓▓    ▓▓  \▓▓  ▓▓\▓▓    ▓▓ ▓▓      
+                                 \▓▓▓▓▓▓  \▓▓▓▓▓▓▓\▓▓ \▓▓▓▓▓▓▓ \▓▓▓▓▓▓ \▓▓ \▓▓▓▓▓▓▓   \▓▓▓▓  \▓▓▓▓▓▓ \▓▓      
+                                                                            
+                                                                            
+                                                                            
 
-        while A not in exitlist and not is_digit(A):
-            print(f"{Style.RESET_ALL}{Fore.RED}\nInvalid Input, Integers are the only values accepted.")
-            A = input(f"{Fore.MAGENTA}\nPlease repick your choise from the list above:{Style.RESET_ALL}{Fore.RED}   ")
+    """)   
+    
+    
+    print(f"{Fore.GREEN}You have opened up a calculator.\n")
+    print(f"{Fore.RED}1 to 4 is basic math, 5 to 8 has more options to choose.{Fore.RESET}\n\n1 = add, 2 = subtract, 3 = multiply, 4 = divide\n\n5 = square root, 6 = power, 7 = Avogadro's selection")
+    A = input(f"{Fore.MAGENTA}\nPlease type your choice:  {Style.RESET_ALL}{Fore.BLUE}")
+    A = A.lower()            #We do this incase user inputs something of a capital letter for the exitlist keywords.
 
-        if quit_progam_any_time(A) == True: #We add this part incase the user wants to exit while inputting a choice
-            print(f"{Style.BRIGHT}{Fore.YELLOW}\nGoodbye!")
-            time.sleep(2)
-            exit() 
+    while A not in exitlist and not is_digit(A):
+        print(f"{Style.RESET_ALL}{Fore.RED}\nInvalid Input, Integers are the only values accepted.")
+        A = input(f"{Fore.MAGENTA}\nPlease repick your choise from the list above:{Style.RESET_ALL}{Fore.RED}   ")
 
-        if A != is_digit(A):
-            A = int(A)
+    if quit_progam_any_time(A) == True: #We add this part incase the user wants to exit while inputting a choice
+        print(f"{Style.BRIGHT}{Fore.YELLOW}\nGoodbye!")
+        time.sleep(2)
+        exit() 
+    if A != is_digit(A):
+        A = int(A)
 
-                                                # Calculation down below
-        if A == 1:
-            print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}addition!{Style.RESET_ALL} \n \nWhat is the {Fore.LIGHTMAGENTA_EX}first {Style.RESET_ALL}number?")
-            first_num_check()
-            second_num_check()
+                                            # Calculation down below
+    if A == 1:
+        print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}addition!{Style.RESET_ALL} \n \nWhat is the {Fore.LIGHTMAGENTA_EX}first {Style.RESET_ALL}number?")
+        first_num_check()
+        second_num_check()
 
-            # if firstnum or secondnum not in exitlist and is_digit(secondnum, firstnum) or is_float(secondnum, firstnum): #If user passes the while loop, then he is checked 1 more time and then converted to a float(decimal) as it has been set to as a string(letter)
+        if firstnum or secondnum not in exitlist and is_digit(secondnum, firstnum) or is_float(secondnum, firstnum): #If user passes the while loop, then he is checked 1 more time and then converted to a float(decimal) as it has been set to as a string(letter)
             firstnum = Decimal(firstnum)
             secondnum = Decimal(secondnum)    
             total = firstnum + secondnum
 
+        print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} +{Style.RESET_ALL} {Fore.MAGENTA}{secondnum}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+        print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")        
+    elif A == 2:
+        print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX} subtraction!{Style.RESET_ALL} \n \nThis will subtract the first number by the second number.")
+        print(f"\nWhat is the {Fore.LIGHTMAGENTA_EX}first {Style.RESET_ALL}number?")
+        
+        first_num_check()
+        second_num_check()
 
-                                    #Will add when I understand it
+        if firstnum or secondnum not in exitlist and is_digit(secondnum, firstnum) or is_float(secondnum, firstnum): #If user passes the while loop, then he is checked 1 more time and then converted to a float(decimal) as it has been set to as a string(letter)
+            firstnum = Decimal(firstnum)
+            secondnum = Decimal(secondnum)
+            total = firstnum - secondnum
+            print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} -{Style.RESET_ALL} {Fore.MAGENTA}{secondnum}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+            print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")       
+    elif A == 3:
+        print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}multiplication!{Style.RESET_ALL} \n \nWhat is the {Fore.LIGHTMAGENTA_EX}first {Style.RESET_ALL}number?")
+        first_num_check()
+        second_num_check()
 
-            print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} +{Style.RESET_ALL} {Fore.MAGENTA}{secondnum}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-            print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")        
-            """
-            print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} +{Style.RESET_ALL} {Fore.MAGENTA}{secondnum}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
 
-            print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}, and the {Fore.LIGHTGREEN_EX}rounded{Style.RESET_ALL}anwser is {rounded}{Style.BRIGHT}.")
-            """
-        elif A == 2:
-            print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX} subtraction!{Style.RESET_ALL} \n \nThis will subtract the first number by the second number.")
-            print(f"\nWhat is the {Fore.LIGHTMAGENTA_EX}first {Style.RESET_ALL}number?")
-            
+        if firstnum or secondnum not in exitlist and is_digit(secondnum, firstnum) or is_float(secondnum, firstnum): #If user passes the while loop, then he is checked 1 more time and then converted to a float(decimal) as it has been set to as a string(letter)
+            firstnum = Decimal(firstnum)
+            secondnum = Decimal(secondnum)
+            total = firstnum * secondnum
+            print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} * {Style.RESET_ALL}{Fore.MAGENTA}{secondnum}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+            print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+    elif A == 4:
+        print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}division!{Style.RESET_ALL} \n{Fore.YELLOW}Please note:{Style.RESET_ALL} This will divide the first number over the second number.\n \nWhat is the {Fore.LIGHTMAGENTA_EX}first {Style.RESET_ALL}number?")
+        
+        first_num_check()
+        second_num_check()
+        if secondnum == 0:
+            del secondnum
+        try:
+            secondnum
+        except NameError:
+            print(f" \n \n{Fore.RED}Division{Style.RESET_ALL} by {Style.BRIGHT}0{Style.RESET_ALL} is {Style.BRIGHT}impossible.\n\n")
+            Repeat = input(f"\n\n{Fore.CYAN}Do you wish to restart the program?{Style.RESET_ALL}   {Fore.LIGHTBLUE_EX}").lower()
+            if Repeat in yeslist:
+                os.system("cls")
+                main()
+            elif Repeat in nolist:
+                exit()
+            else:
+                exit()    
+        if firstnum or secondnum not in exitlist and is_digit(secondnum, firstnum) or is_float(secondnum, firstnum): #If user passes the while loop, then he is checked 1 more time and then converted to a float(decimal) as it has been set to as a string(letter)
+        
+            firstnum = Decimal(firstnum)
+            secondnum = Decimal(secondnum)
+    
+        if secondnum == 0:
+            del secondnum
+        try:
+            secondnum
+        except NameError:
+            print(f" \n \n{Fore.RED}Division{Style.RESET_ALL} by {Style.BRIGHT}0{Style.RESET_ALL} is {Style.BRIGHT}impossible.\n\n")
+            Repeat = input(f"\n\n{Fore.CYAN}Do you wish to restart the program?{Style.RESET_ALL}   {Fore.LIGHTBLUE_EX}").lower()
+            if Repeat in yeslist:
+                os.system("cls")
+                main()
+            elif Repeat in nolist:
+                exit()
+            else:
+                exit()
+            total = firstnum / secondnum
+
+        print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} / {Style.RESET_ALL}{Fore.MAGENTA}{secondnum}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+        print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+    elif A == 5:
+        
+        print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}square root!{Style.RESET_ALL}")
+        first_num_check()
+        if firstnum not in exitlist and is_digit(firstnum) or is_float(firstnum):
+            firstnum = Decimal(firstnum)
+            result = sqrt(firstnum)
+        print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} √ {Style.RESET_ALL}{Fore.YELLOW}{firstnum}{Style.RESET_ALL} = {Fore.RED}{result}{Style.RESET_ALL}{Style.BRIGHT}.")            
+        print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{result}{Style.RESET_ALL}{Style.BRIGHT}.")
+
+    elif A == 6:
+        print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}power!{Style.RESET_ALL}\n \nWhat is the {Fore.LIGHTMAGENTA_EX}base {Style.RESET_ALL}number?")
+        base_num_check()
+        print(f"\n{Fore.RESET}What is the {Fore.LIGHTMAGENTA_EX} exponent {Style.RESET_ALL}number? ")
+        exponent_num_check()
+        if base_number or exponent not in exitlist and is_digit(base_number, exponent) or is_float(base_number, exponent): #If user passes the while loop, then he is checked 1 more time and then converted to a float(decimal) as it has been set to as a string(letter)
+            base_number = Decimal(base_number)
+            exponent = Decimal(exponent)
+            total = base_number ** exponent
+        print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {base_number}{Style.RESET_ALL}{Style.BRIGHT} ^ {Style.RESET_ALL}{Fore.MAGENTA}{exponent}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+        print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")               
+    elif A == 7:
+        os.system("cls")
+        print(logo_avagadro_number)
+        print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}Avagadro's selection!{Style.RESET_ALL}")
+        print(f"{Fore.RED}\n\n1 = addition + Avogadro's number, 2 = subtraction - Avogadro's number\n\n3 = multiplication * Avogadro's number, 4 = division /  Avogadro's number")
+        avogadro_choice = input(f"{Fore.MAGENTA}\nPlease type your choice:  {Style.RESET_ALL}{Fore.BLUE}")
+        while avogadro_choice not in exitlist and not is_digit(avogadro_choice):
+            print(f"{Style.RESET_ALL}{Fore.RED}\nInvalid Input, Integers are the only values accepted.")
+            avogadro_choice = input(f"{Fore.MAGENTA}\nPlease repick your choise from the list above:{Style.RESET_ALL}{Fore.RED}   ")
+
+        if quit_progam_any_time(avogadro_choice) == True: #We add this part incase the user wants to exit while inputting a choice
+            print(f"{Style.BRIGHT}{Fore.YELLOW}\nGoodbye!")
+            time.sleep(2)
+            exit() 
+
+        if avogadro_choice != is_digit(avogadro_choice):
+            avogadro_choice = int(avogadro_choice)
+        if avogadro_choice == 1:
+            print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}addition!{Style.RESET_ALL} \n \nWhat's the {Fore.LIGHTMAGENTA_EX}first {Style.RESET_ALL}number?")
             first_num_check()
-            second_num_check()
-
-            if firstnum or secondnum not in exitlist and is_digit(secondnum, firstnum) or is_float(secondnum, firstnum): #If user passes the while loop, then he is checked 1 more time and then converted to a float(decimal) as it has been set to as a string(letter)
+            print(f"\n{Fore.RESET}Do you want a second number? 1 = no, 2 = yes")
+            choice_check()
+            if choice == 1:
+                firstnum  = Decimal(firstnum)
+                total = float(firstnum) + Avogadronumber # we do this because we can't add Decimal class to float.
+                print(f"{Fore.RESET}\nThe {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} + {Style.RESET_ALL}{Fore.MAGENTA}{Avogadronumber}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+                print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+            elif choice == 2:
+                print(f"\n{Fore.RESET}What is the {Fore.LIGHTMAGENTA_EX}second {Style.RESET_ALL}number then?")
+                second_num_check()
                 firstnum = Decimal(firstnum)
                 secondnum = Decimal(secondnum)
-                total = firstnum - secondnum
-                print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} -{Style.RESET_ALL} {Fore.MAGENTA}{secondnum}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-                print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")       
-        elif A == 3:
-            print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}multiplication!{Style.RESET_ALL} \n \nWhat is the {Fore.LIGHTMAGENTA_EX}first {Style.RESET_ALL}number?")
-            first_num_check()
-            second_num_check()
-
-
-            if firstnum or secondnum not in exitlist and is_digit(secondnum, firstnum) or is_float(secondnum, firstnum): #If user passes the while loop, then he is checked 1 more time and then converted to a float(decimal) as it has been set to as a string(letter)
-                firstnum = Decimal(firstnum)
-                secondnum = Decimal(secondnum)
-                total = firstnum * secondnum
-                print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} * {Style.RESET_ALL}{Fore.MAGENTA}{secondnum}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-                print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-        elif A == 4:
-            print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}division!{Style.RESET_ALL} \n{Fore.YELLOW}Please note:{Style.RESET_ALL} This will divide the first number over the second number.\n \nWhat is the {Fore.LIGHTMAGENTA_EX}first {Style.RESET_ALL}number?")
-            
-            first_num_check()
-            second_num_check()
-            if secondnum == 0:
-                del secondnum
-            try:
-                secondnum
-            except NameError:
-                print(f" \n \n{Fore.RED}Division{Style.RESET_ALL} by {Style.BRIGHT}0{Style.RESET_ALL} is {Style.BRIGHT}impossible.\n\n")
-                Repeat = input(f"\n\n{Fore.CYAN}Do you wish to restart the program?{Style.RESET_ALL}   {Fore.LIGHTBLUE_EX}").lower()
-                if Repeat in yeslist:
-                    os.system("cls")
-                    main()
-                elif Repeat in nolist:
-                    exit()
-                else:
-                    exit()    
-            if firstnum or secondnum not in exitlist and is_digit(secondnum, firstnum) or is_float(secondnum, firstnum): #If user passes the while loop, then he is checked 1 more time and then converted to a float(decimal) as it has been set to as a string(letter)
-            
-                firstnum = Decimal(firstnum)
-                secondnum = Decimal(secondnum)
-           
-            if secondnum == 0:
-                del secondnum
-            try:
-                secondnum
-            except NameError:
-                print(f" \n \n{Fore.RED}Division{Style.RESET_ALL} by {Style.BRIGHT}0{Style.RESET_ALL} is {Style.BRIGHT}impossible.\n\n")
-                Repeat = input(f"\n\n{Fore.CYAN}Do you wish to restart the program?{Style.RESET_ALL}   {Fore.LIGHTBLUE_EX}").lower()
-                if Repeat in yeslist:
-                    os.system("cls")
-                    main()
-                elif Repeat in nolist:
-                    exit()
-                else:
-                    exit()
-                total = firstnum / secondnum
-
-            print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} / {Style.RESET_ALL}{Fore.MAGENTA}{secondnum}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-            print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-        elif A == 5:
-            
-            print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}square root!{Style.RESET_ALL}")
-            first_num_check()
-            if firstnum not in exitlist and is_digit(firstnum) or is_float(firstnum):
-                firstnum = Decimal(firstnum)
-                result = sqrt(firstnum)
-            print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} √ {Style.RESET_ALL}{Fore.YELLOW}{firstnum}{Style.RESET_ALL} = {Fore.RED}{result}{Style.RESET_ALL}{Style.BRIGHT}.")            
-            print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{result}{Style.RESET_ALL}{Style.BRIGHT}.")
-
-        elif A == 6:
-            print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}power!{Style.RESET_ALL}\n \nWhat is the {Fore.LIGHTMAGENTA_EX}base {Style.RESET_ALL}number?")
-            base_num_check()
-            print(f"\n{Fore.RESET}What is the {Fore.LIGHTMAGENTA_EX} exponent {Style.RESET_ALL}number? ")
-            exponent_num_check()
-            if base_number or exponent not in exitlist and is_digit(base_number, exponent) or is_float(base_number, exponent): #If user passes the while loop, then he is checked 1 more time and then converted to a float(decimal) as it has been set to as a string(letter)
-                base_number = Decimal(base_number)
-                exponent = Decimal(exponent)
-                total = base_number ** exponent
-            print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {base_number}{Style.RESET_ALL}{Style.BRIGHT} ^ {Style.RESET_ALL}{Fore.MAGENTA}{exponent}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-            print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")               
-        elif A == 7:
-            os.system("cls")
-            print(logo_avagadro_number)
-            print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}Avagadro's selection!{Style.RESET_ALL}")
-            print(f"{Fore.RED}\n\n1 = addition + Avogadro's number, 2 = subtraction - Avogadro's number\n\n3 = multiplication * Avogadro's number, 4 = division /  Avogadro's number")
-            avogadro_choice = input(f"{Fore.MAGENTA}\nPlease type your choice:  {Style.RESET_ALL}{Fore.BLUE}")
-            while avogadro_choice not in exitlist and not is_digit(avogadro_choice):
-                print(f"{Style.RESET_ALL}{Fore.RED}\nInvalid Input, Integers are the only values accepted.")
-                avogadro_choice = input(f"{Fore.MAGENTA}\nPlease repick your choise from the list above:{Style.RESET_ALL}{Fore.RED}   ")
-
-            if quit_progam_any_time(avogadro_choice) == True: #We add this part incase the user wants to exit while inputting a choice
-                print(f"{Style.BRIGHT}{Fore.YELLOW}\nGoodbye!")
-                time.sleep(2)
-                exit() 
-
-            if avogadro_choice != is_digit(avogadro_choice):
-                avogadro_choice = int(avogadro_choice)
-            if avogadro_choice == 1:
-                print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}addition!{Style.RESET_ALL} \n \nWhat's the {Fore.LIGHTMAGENTA_EX}first {Style.RESET_ALL}number?")
-                first_num_check()
-                print(f"\n{Fore.RESET}Do you want a second number? 1 = no, 2 = yes")
-                choice_check()
-                if choice == 1:
-                    firstnum  = Decimal(firstnum)
-                    total = float(firstnum) + Avogadronumber # we do this because we can't add Decimal class to float.
-                    print(f"{Fore.RESET}\nThe {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} + {Style.RESET_ALL}{Fore.MAGENTA}{Avogadronumber}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-                    print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-                elif choice == 2:
-                    print(f"\n{Fore.RESET}What is the {Fore.LIGHTMAGENTA_EX}second {Style.RESET_ALL}number then?")
-                    second_num_check()
-                    firstnum = Decimal(firstnum)
-                    secondnum = Decimal(secondnum)
-                    total = float(firstnum) + float(secondnum) + Avogadronumber
-                    print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} + {Style.RESET_ALL}{Fore.MAGENTA}{secondnum}{Style.RESET_ALL}{Style.BRIGHT} +{Style.RESET_ALL} {Fore.MAGENTA}{Avogadronumber}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-                    print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-                else:
-                    print(f"\n\n{Fore.RED}{no_choice}{Style.BRIGHT}")
-                    time.sleep(5)
-                    Repeat = input(f"\n\n{Fore.CYAN}Do you wish to restart the program?{Style.RESET_ALL}   {Fore.LIGHTBLUE_EX}").lower()
-                    if Repeat in yeslist:
-                        os.system("cls")
-                        main()
-                    else:
-                        exit()
-            elif avogadro_choice == 2:
-                print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}subtraction!{Style.RESET_ALL} \n{Fore.YELLOW}Please note:{Style.RESET_ALL}This will subtract the first number to the second number (if you choose one) to Avogadro's number.")
-                print(f"\nWhat's the {Fore.LIGHTMAGENTA_EX}first {Style.RESET_ALL}number?")
-                first_num_check()
-                print(f"\n{Fore.RESET}{Style.BRIGHT}Do you want a second number? 1 = no, 2 = yes")
-                choice_check()
-                if choice == 1:
-                    firstnum = Decimal(firstnum)
-                    total = float(firstnum) - Avogadronumber
-                    print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} - {Style.RESET_ALL}{Fore.MAGENTA}{Avogadronumber}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-                    print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-                elif choice == 2:
-                    print(f"\n{Fore.RESET}What is the {Fore.LIGHTMAGENTA_EX}second {Style.RESET_ALL}number then?")
-                    second_num_check()
-                    secondnum = Decimal(secondnum)
-                    firstnum = Decimal(firstnum)
-                    total = (float(firstnum) - float(secondnum)) - Avogadronumber
-                    print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Style.BRIGHT}({Style.RESET_ALL}{Fore.MAGENTA}{firstnum}{Style.RESET_ALL}{Style.BRIGHT} - {Style.RESET_ALL}{Fore.MAGENTA}{secondnum}{Style.RESET_ALL}{Style.BRIGHT}) - {Fore.MAGENTA}{Avogadronumber}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-                    print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-                else:
-                    print(f"\n\n{Fore.RED}{no_choice}{Style.BRIGHT}")
-                    time.sleep(5)
-                    Repeat = input(f"\n\n{Fore.CYAN}Do you wish to restart the program?{Style.RESET_ALL}   {Fore.LIGHTBLUE_EX}").lower()
-                    if Repeat in yeslist:
-                        os.system("cls")
-                        main()
-                    else:
-                        exit()
-            elif avogadro_choice == 3:
-                print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}multiplication!{Style.RESET_ALL} \n \nWhat's the {Fore.LIGHTMAGENTA_EX}first {Style.RESET_ALL}number?")
-                first_num_check()
-                print(f"\n{Fore.RESET}Do you want a second number? 1 = no, 2 = yes")
-                choice_check()
-                
-                if choice == 1:
-                    firstnum = Decimal(firstnum)
-                    total = float(firstnum) * Avogadronumber
-                    print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} * {Style.RESET_ALL}{Fore.MAGENTA}{Avogadronumber}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-                    print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-                elif choice == 2:
-                    print(f"\n{Fore.RESET}What is the {Fore.LIGHTMAGENTA_EX}second {Style.RESET_ALL}number then?")
-                    second_num_check()
-                    firstnum = Decimal(firstnum)
-                    secondnum = Decimal(secondnum)
-                    total = float(firstnum) * float(secondnum) * Avogadronumber
-                    print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} * {Style.RESET_ALL}{Fore.MAGENTA}{secondnum}{Style.RESET_ALL}{Style.BRIGHT} * {Style.RESET_ALL}{Fore.MAGENTA}{Avogadronumber}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-                    print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-                else:
-                    print(f"\n\n{Fore.RED}{no_choice}{Style.BRIGHT}")
-                    time.sleep(5)
-                    Repeat = input(f"\n\n{Fore.CYAN}Do you wish to restart the program?{Style.RESET_ALL}   {Fore.LIGHTBLUE_EX}").lower()
-                    if Repeat in yeslist:
-                        os.system("cls")
-                        main()
-                    else:
-                        exit()            
-            elif avogadro_choice == 4:
-                print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}division!{Style.RESET_ALL} \n{Fore.YELLOW}Please note:{Style.RESET_ALL} This will divide the first number over the second number (If you choose a second number) over Avogadro's number.\n \nWhat's the {Fore.LIGHTMAGENTA_EX}first {Style.RESET_ALL}number?")
-                first_num_check()
-                print(f"\n{Fore.RESET}{Style.BRIGHT}Do you want a second number? 1 = no, 2 = yes")
-                choice_check()
-                if choice == 1:
-                    firstnum = Decimal(firstnum)
-                    total = float(firstnum) / Avogadronumber 
-                    print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} / {Style.RESET_ALL}{Fore.MAGENTA}{Avogadronumber}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.{Style.RESET_ALL}\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-                elif choice == 2:
-                    print(f"\n{Fore.RESET}What is the {Fore.LIGHTMAGENTA_EX}second {Style.RESET_ALL}number then?")
-                    second_num_check()
-                    firstnum = Decimal(firstnum)
-                    secondnum = Decimal(secondnum)
-
-                    if secondnum == 0:
-                        del secondnum
-                    try:
-                        secondnum
-                    except NameError:
-                        print(f" \n \n{Fore.RED}Division{Style.RESET_ALL} by {Style.BRIGHT}0{Style.RESET_ALL} is {Style.BRIGHT}impossible.\n\n")
-                    else:
-                        total = (float(firstnum) / float(secondnum)) / Avogadronumber
-                        print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Style.BRIGHT}({Style.RESET_ALL}{Fore.MAGENTA}{firstnum}{Style.RESET_ALL}{Style.BRIGHT} / {Style.RESET_ALL}{Fore.MAGENTA}{secondnum}{Style.RESET_ALL}{Style.BRIGHT} / {Style.RESET_ALL}{Fore.MAGENTA}{Avogadronumber}{Style.RESET_ALL}{Style.BRIGHT}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
-                        print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.\n\n")
-                else:
-                    print(f"\n\n{Fore.RED}{no_choice}{Style.BRIGHT}")
-                    time.sleep(5)
-                    Repeat = input(f"\n\n{Fore.CYAN}Do you wish to restart the program?{Style.RESET_ALL}   {Fore.LIGHTBLUE_EX}").lower()
-                    if Repeat in yeslist:
-                        os.system("cls")
-                        main()
-                    else:
-                        exit()            
+                total = float(firstnum) + float(secondnum) + Avogadronumber
+                print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} + {Style.RESET_ALL}{Fore.MAGENTA}{secondnum}{Style.RESET_ALL}{Style.BRIGHT} +{Style.RESET_ALL} {Fore.MAGENTA}{Avogadronumber}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+                print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
             else:
                 print(f"\n\n{Fore.RED}{no_choice}{Style.BRIGHT}")
+                time.sleep(5)
+                Repeat = input(f"\n\n{Fore.CYAN}Do you wish to restart the program?{Style.RESET_ALL}   {Fore.LIGHTBLUE_EX}").lower()
+                if Repeat in yeslist:
+                    os.system("cls")
+                    main()
+                else:
+                    exit()
+        elif avogadro_choice == 2:
+            print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}subtraction!{Style.RESET_ALL} \n{Fore.YELLOW}Please note:{Style.RESET_ALL}This will subtract the first number to the second number (if you choose one) to Avogadro's number.")
+            print(f"\nWhat's the {Fore.LIGHTMAGENTA_EX}first {Style.RESET_ALL}number?")
+            first_num_check()
+            print(f"\n{Fore.RESET}{Style.BRIGHT}Do you want a second number? 1 = no, 2 = yes")
+            choice_check()
+            if choice == 1:
+                firstnum = Decimal(firstnum)
+                total = float(firstnum) - Avogadronumber
+                print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} - {Style.RESET_ALL}{Fore.MAGENTA}{Avogadronumber}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+                print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+            elif choice == 2:
+                print(f"\n{Fore.RESET}What is the {Fore.LIGHTMAGENTA_EX}second {Style.RESET_ALL}number then?")
+                second_num_check()
+                secondnum = Decimal(secondnum)
+                firstnum = Decimal(firstnum)
+                total = (float(firstnum) - float(secondnum)) - Avogadronumber
+                print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Style.BRIGHT}({Style.RESET_ALL}{Fore.MAGENTA}{firstnum}{Style.RESET_ALL}{Style.BRIGHT} - {Style.RESET_ALL}{Fore.MAGENTA}{secondnum}{Style.RESET_ALL}{Style.BRIGHT}) - {Fore.MAGENTA}{Avogadronumber}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+                print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+            else:
+                print(f"\n\n{Fore.RED}{no_choice}{Style.BRIGHT}")
+                time.sleep(5)
+                Repeat = input(f"\n\n{Fore.CYAN}Do you wish to restart the program?{Style.RESET_ALL}   {Fore.LIGHTBLUE_EX}").lower()
+                if Repeat in yeslist:
+                    os.system("cls")
+                    main()
+                else:
+                    exit()
+        elif avogadro_choice == 3:
+            print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}multiplication!{Style.RESET_ALL} \n \nWhat's the {Fore.LIGHTMAGENTA_EX}first {Style.RESET_ALL}number?")
+            first_num_check()
+            print(f"\n{Fore.RESET}Do you want a second number? 1 = no, 2 = yes")
+            choice_check()
+            
+            if choice == 1:
+                firstnum = Decimal(firstnum)
+                total = float(firstnum) * Avogadronumber
+                print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} * {Style.RESET_ALL}{Fore.MAGENTA}{Avogadronumber}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+                print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+            elif choice == 2:
+                print(f"\n{Fore.RESET}What is the {Fore.LIGHTMAGENTA_EX}second {Style.RESET_ALL}number then?")
+                second_num_check()
+                firstnum = Decimal(firstnum)
+                secondnum = Decimal(secondnum)
+                total = float(firstnum) * float(secondnum) * Avogadronumber
+                print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} * {Style.RESET_ALL}{Fore.MAGENTA}{secondnum}{Style.RESET_ALL}{Style.BRIGHT} * {Style.RESET_ALL}{Fore.MAGENTA}{Avogadronumber}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+                print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+            else:
+                print(f"\n\n{Fore.RED}{no_choice}{Style.BRIGHT}")
+                time.sleep(5)
+                Repeat = input(f"\n\n{Fore.CYAN}Do you wish to restart the program?{Style.RESET_ALL}   {Fore.LIGHTBLUE_EX}").lower()
+                if Repeat in yeslist:
+                    os.system("cls")
+                    main()
+                else:
+                    exit()            
+        elif avogadro_choice == 4:
+            print(f"\n{Fore.RESET}You have chosen {Fore.LIGHTRED_EX}division!{Style.RESET_ALL} \n{Fore.YELLOW}Please note:{Style.RESET_ALL} This will divide the first number over the second number (If you choose a second number) over Avogadro's number.\n \nWhat's the {Fore.LIGHTMAGENTA_EX}first {Style.RESET_ALL}number?")
+            first_num_check()
+            print(f"\n{Fore.RESET}{Style.BRIGHT}Do you want a second number? 1 = no, 2 = yes")
+            choice_check()
+            if choice == 1:
+                firstnum = Decimal(firstnum)
+                total = float(firstnum) / Avogadronumber 
+                print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Fore.MAGENTA} {firstnum}{Style.RESET_ALL}{Style.BRIGHT} / {Style.RESET_ALL}{Fore.MAGENTA}{Avogadronumber}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.{Style.RESET_ALL}\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+            elif choice == 2:
+                print(f"\n{Fore.RESET}What is the {Fore.LIGHTMAGENTA_EX}second {Style.RESET_ALL}number then?")
+                second_num_check()
+                firstnum = Decimal(firstnum)
+                secondnum = Decimal(secondnum)
+
+                if secondnum == 0:
+                    del secondnum
+                try:
+                    secondnum
+                except NameError:
+                    print(f" \n \n{Fore.RED}Division{Style.RESET_ALL} by {Style.BRIGHT}0{Style.RESET_ALL} is {Style.BRIGHT}impossible.\n\n")
+                else:
+                    total = (float(firstnum) / float(secondnum)) / Avogadronumber
+                    print(f"\n{Fore.RESET}The {Fore.LIGHTGREEN_EX}calculation{Style.RESET_ALL} is {Style.BRIGHT}({Style.RESET_ALL}{Fore.MAGENTA}{firstnum}{Style.RESET_ALL}{Style.BRIGHT} / {Style.RESET_ALL}{Fore.MAGENTA}{secondnum}{Style.RESET_ALL}{Style.BRIGHT} / {Style.RESET_ALL}{Fore.MAGENTA}{Avogadronumber}{Style.RESET_ALL}{Style.BRIGHT}{Style.RESET_ALL} = {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.")
+                    print(f"\nThe {Fore.LIGHTGREEN_EX}total{Style.RESET_ALL} answer is {Fore.RED}{total}{Style.RESET_ALL}{Style.BRIGHT}.\n\n")
+            else:
+                print(f"\n\n{Fore.RED}{no_choice}{Style.BRIGHT}")
+                time.sleep(5)
+                Repeat = input(f"\n\n{Fore.CYAN}Do you wish to restart the program?{Style.RESET_ALL}   {Fore.LIGHTBLUE_EX}").lower()
+                if Repeat in yeslist:
+                    os.system("cls")
+                    main()
+                else:
+                    exit()            
         else:
             print(f"\n\n{Fore.RED}{no_choice}{Style.BRIGHT}")
+    else:
+        print(f"\n\n{Fore.RED}{no_choice}{Style.BRIGHT}")
 
-
-
-
-
-
-
-        # print(f"{Fore.LIGHTCYAN_EX}\n\n\nIf you have any questions please contact me on my github(https://github.com/Flowgonnarap/calculator){Style.RESET_ALL}{Style.BRIGHT}.\n\n")
-        Repeat = input(f"\n\n{Fore.CYAN}Do you wish to restart the program?{Style.RESET_ALL}   {Fore.LIGHTBLUE_EX}").lower()
-        if Repeat in yeslist:
-            os.system("cls")
-            main()
-        elif Repeat in nolist:
-            exit()
-        else:
-            exit()
-            #Where the code starts
-main()
+    Repeat = input(f"\n\n{Fore.CYAN}Do you wish to restart the program?{Style.RESET_ALL}   {Fore.LIGHTBLUE_EX}").lower()
+    if Repeat in yeslist:
+        os.system("cls")
+        main()
+    elif Repeat in nolist:
+        exit()
+    else:
+        exit()
+        #Where the code starts
+main() #final product all inside the "main" function.
